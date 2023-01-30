@@ -1,0 +1,21 @@
+.post__inner {
+    margin-bottom: 50px !important;
+    padding: 20px;
+
+    border-radius: 10px !important;
+
+    > .post__title {
+        font-size: 22px !important;
+        font-weight: 900 !important;
+    }
+
+    > .post__text {
+        font-size: 17px;
+
+        margin: 25px 0px 20px 0px !important;
+    }
+
+    > .post__img {
+        width: 100%;
+    }
+}
