@@ -23,7 +23,7 @@ export const NavbarForm: React.FC = () => {
                         <SearchIcon />
                         <input placeholder="Поиск" />
                     </Box>
-                    <Button variant="contained" color="primary" disableRipple>
+                    <Button variant="contained" color="primary">
                         Новая запись
                     </Button>
                 </Box>

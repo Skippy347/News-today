@@ -15,7 +15,7 @@ export const NavbarMenu: React.FC = () => {
         <Box className={styles.menu__inner}>
             <ul>
                 <li>
-                    <Button>
+                    <Button variant="contained">
                         <FireIcon />
                         Лента
                     </Button>
