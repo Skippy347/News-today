@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./NavbarForm.module.scss";
 
 import { Button, IconButton, Paper } from "@mui/material";

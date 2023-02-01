@@ -1,5 +1,3 @@
-import React from "react";
-
 import styles from "./PostActions.module.scss";
 
 import { IconButton } from "@mui/material";

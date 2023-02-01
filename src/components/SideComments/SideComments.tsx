@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./SideComments.module.scss";
 import clsx from "clsx";
 

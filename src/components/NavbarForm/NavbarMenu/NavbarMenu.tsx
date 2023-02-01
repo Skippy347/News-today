@@ -1,44 +1,31 @@
-import React from "react";
-
 import styles from "./NavbarMenu.module.scss";
 
 import { Box } from "@mui/system";
-
-import FireIcon from "@mui/icons-material/WhatshotOutlined";
-import MessageIcon from "@mui/icons-material/TextsmsOutlined";
-import TrendingUpIcon from "@mui/icons-material/TrendingUpOutlined";
-import StarIcon from "@mui/icons-material/StarBorderPurple500Outlined";
 import { Button } from "@mui/material";
+import { Link, useLocation } from "react-router-dom";
+
+import { schemaMenu } from "./NavbarMenuSchema";
 
 export const NavbarMenu: React.FC = () => {
+    const location = useLocation();
+    const menuItemsRendered = Object.keys(schemaMenu).map((category) =>
+        schemaMenu[category].map((app) =>
+            app.tabs.map((tabInfo) => (
+                <li key={tabInfo.label}>
+                    <Link to={tabInfo.to}>
+                        <Button variant={location.pathname === tabInfo.to ? "contained" : "text"}>
+                            {tabInfo.iconClass}
+                            {tabInfo.label}
+                        </Button>
+                    </Link>
+                </li>
+            ))
+        )
+    );
+
     return (
         <Box className={styles.menu__inner}>
-            <ul>
-                <li>
-                    <Button variant="contained">
-                        <FireIcon />
-                        Лента
-                    </Button>
-                </li>
-                <li>
-                    <Button>
-                        <MessageIcon />
-                        Сообщения
-                    </Button>
-                </li>
-                <li>
-                    <Button>
-                        <TrendingUpIcon />
-                        Рейтинг
-                    </Button>
-                </li>
-                <li>
-                    <Button>
-                        <StarIcon />
-                        Подписчики
-                    </Button>
-                </li>
-            </ul>
+            <ul>{menuItemsRendered}</ul>
         </Box>
     );
 };
