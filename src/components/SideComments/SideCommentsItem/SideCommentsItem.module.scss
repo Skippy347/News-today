@@ -1,33 +1,33 @@
-.comments__item__inner {
+.comments_inner {
     margin-bottom: 25px;
-}
 
-.comments__user__info {
-    display: flex;
-    align-items: center;
+    > .comments_user_info {
+        display: flex;
+        align-items: center;
 
-    img {
-        height: 24px;
-        width: 24px;
+        img {
+            height: 24px;
+            width: 24px;
 
-        margin-right: 8px;
+            margin-right: 8px;
 
-        border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        span {
+            font-size: 18px;
+            font-weight: 600;
+        }
     }
 
-    span {
-        font-size: 18px;
-        font-weight: 600;
+    > .comments_user_text {
+        font-size: 16px;
+
+        margin: 8px 0px 5px 0px;
     }
-}
 
-.comments__user__text {
-    font-size: 16px;
-
-    margin: 8px 0px 5px 0px;
-}
-
-.comments__user__title {
-    font-size: 15px;
-    font-weight: 600 !important;
+    > .comments_user_title {
+        font-size: 15px;
+        font-weight: 600 !important;
+    }
 }

@@ -1,11 +1,11 @@
-import { useState } from "react";
 import styles from "./SideComments.module.scss";
 import clsx from "clsx";
 
+import ArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+
+import { useState } from "react";
 import { Box } from "@mui/system";
 import { SideCommentsItem } from "./SideCommentsItem/SideCommentsItem";
-
-import ArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 export const SideComments: React.FC = () => {
     const [visible, setVisible] = useState(true);
@@ -16,7 +16,7 @@ export const SideComments: React.FC = () => {
 
     return (
         <>
-            <Box className={clsx(styles.comments__inner, !visible && styles.rotated)}>
+            <Box className={clsx(styles.comments_inner, !visible && styles.rotated)}>
                 <Box onClick={toggleVissible}>
                     <h3>
                         Комментарии <ArrowRightIcon />

@@ -4,6 +4,7 @@ import { Box } from "@mui/system";
 import { NavbarForm } from "../NavbarForm/NavbarForm";
 import { NavbarMenu } from "../NavbarForm/NavbarMenu/NavbarMenu";
 import { SideComments } from "../SideComments/SideComments";
+import { Button } from "@mui/material";
 
 interface MainLayoutProps {
     children: string | JSX.Element | JSX.Element[]; //Изменить
@@ -23,7 +24,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
                 <Box>
                     <NavbarMenu />
                 </Box>
-                <Box className={clsx("container", { container__full: containerFullWidth })}>
+                <Box className={clsx("container", { container_full: containerFullWidth })}>
                     {children}
                 </Box>
                 {!hideComments && (

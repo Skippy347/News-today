@@ -24,7 +24,7 @@ export const schemaMenu: INavbarSchema = {
                 {
                     iconClass: <FireIcon />,
                     label: "Лента",
-                    to: "/1",
+                    to: "/",
                 },
                 {
                     iconClass: <MessageIcon />,

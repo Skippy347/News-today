@@ -24,7 +24,7 @@ export const NavbarMenu: React.FC = () => {
     );
 
     return (
-        <Box className={styles.menu__inner}>
+        <Box className={styles.menu_inner}>
             <ul>{menuItemsRendered}</ul>
         </Box>
     );

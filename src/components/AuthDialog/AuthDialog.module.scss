@@ -1,0 +1,45 @@
+.dialog_inner {
+    display: flex;
+
+    > .dialog_img {
+        width: 100%;
+        max-width: 40%;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    > .dialog_content {
+        width: 100%;
+        max-width: 60%;
+
+        padding: 100px 20px 20px 20px;
+
+        > .dialog_content_title {
+            font-size: 18px;
+            font-weight: 700;
+
+            color: black;
+
+            margin-bottom: 25px;
+
+            > .dialog_back_title {
+                display: flex;
+                align-items: center;
+
+                cursor: pointer;
+                transition: all 0.2s linear;
+
+                &:hover {
+                    color: #4683d9;
+                }
+
+                svg {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
