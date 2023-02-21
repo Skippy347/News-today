@@ -1,0 +1,13 @@
+.post_title {
+    &::before,
+    &::after {
+        display: none;
+    }
+    font-size: 36px !important;
+    font-weight: 600 !important;
+}
+
+.post_editor {
+    font-size: 18px;
+    min-height: calc(100vh - 220px);
+}

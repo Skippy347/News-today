@@ -29,17 +29,17 @@ export const schemaMenu: INavbarSchema = {
                 {
                     iconClass: <MessageIcon />,
                     label: "Сообщения",
-                    to: "/2",
+                    to: "/messages",
                 },
                 {
                     iconClass: <TrendingUpIcon />,
                     label: "Рейтинг",
-                    to: "/3",
+                    to: "/rating",
                 },
                 {
                     iconClass: <StarIcon />,
                     label: "Подписки",
-                    to: "/4",
+                    to: "/subscriptions",
                 },
             ],
         },

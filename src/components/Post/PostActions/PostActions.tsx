@@ -7,8 +7,6 @@ import ShareIcon from "@mui/icons-material/ShareOutlined";
 
 import { IconButton } from "@mui/material";
 
-
-
 export const PostActions: React.FC = () => {
     return (
         <>

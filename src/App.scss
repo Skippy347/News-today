@@ -1,6 +1,6 @@
 .wrapper {
     display: flex;
-    
+
     padding: 75px 15px 0px 15px;
 }
 
@@ -13,4 +13,10 @@
     &_full {
         max-width: 1000px;
     }
+}
+
+.main_layout_color {
+    background-color: #fff;
+    height: 100%;
+    min-height: 100vh;
 }

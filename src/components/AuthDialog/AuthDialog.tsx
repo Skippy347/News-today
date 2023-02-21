@@ -8,7 +8,6 @@ import { useState } from "react";
 import { LoginForm } from "./AuthForms/LoginForm/LoginForm";
 import { MainForm } from "./AuthForms/MainForm/MainForm";
 import { RegistrationForm } from "./AuthForms/RegistrationForm/RegistrationForm";
-import { Link } from "react-router-dom";
 
 interface AuthDialogProps {
     closeAuthDialog: () => void;
@@ -24,7 +23,7 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({ closeAuthDialog, openAut
                 <Box className={styles.dialog_inner}>
                     <Box className={styles.dialog_img}>
                         <img
-                            src="https://avatars.mds.yandex.net/get-images-cbir/2052465/FGNnlAtpUTIaOerNU7K5Dw2203/ocr"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD4pAmkRKcN0S3y2KMlOYDyJ88HUXDCQJO-w&usqp=CAU"
                             alt=""
                         />
                     </Box>

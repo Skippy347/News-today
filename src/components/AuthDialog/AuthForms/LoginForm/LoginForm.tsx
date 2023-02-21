@@ -2,6 +2,7 @@ import { Button, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { login } from "../../../../http/userApi";
 
 interface LoginFormProps {
     onOpenRegister: () => void;
@@ -22,7 +23,11 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onOpenRegister }) => {
                 .max(50, "Password cannot be longer than 50 characters")
                 .required("This field is required "),
         }),
-        onSubmit: (values) => console.log(JSON.stringify(values, null, 2)),
+        onSubmit: async ({ email, password }) => {
+            const response = await login(email, password);
+            console.log(response);
+            window.location.reload();
+        },
     });
 
     return (
@@ -65,6 +70,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onOpenRegister }) => {
                         : null}
                 </Box>
                 <Button
+                    value="Reload Page"
                     type="submit"
                     style={{ marginTop: "50px", marginBottom: "10px" }}
                     color="primary"

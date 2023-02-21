@@ -2,16 +2,17 @@ import * as Yup from "yup";
 
 import { Box, Button, TextField } from "@mui/material";
 import { useFormik } from "formik";
+import { registration } from "../../../../http/userApi";
 
 export const RegistrationForm: React.FC = () => {
     const RegistrationFormControl = useFormik({
         initialValues: {
-            username: "",
+            fullName: "",
             email: "",
             password: "",
         },
         validationSchema: Yup.object({
-            username: Yup.string()
+            fullName: Yup.string()
                 .min(2, "Username must be at least 2 characters")
                 .max(50, "Username cannot be longer than 100 characters")
                 .test("is_one_word", "No spaces allowed", (value) => {
@@ -29,7 +30,10 @@ export const RegistrationForm: React.FC = () => {
                 .max(50, "Password cannot be longer than 50 characters")
                 .required("This field is required "),
         }),
-        onSubmit: (values) => console.log(JSON.stringify(values, null, 2)),
+        onSubmit: async ({ fullName, email, password }) => {
+            const response = await registration(fullName, email, password);
+            console.log(response);
+        },
     });
     return (
         <>
@@ -42,16 +46,16 @@ export const RegistrationForm: React.FC = () => {
                     <TextField
                         size="small"
                         label="Username"
-                        type="username"
-                        name="username"
-                        value={RegistrationFormControl.values.username}
+                        type="fullName"
+                        name="fullName"
+                        value={RegistrationFormControl.values.fullName}
                         onChange={RegistrationFormControl.handleChange}
                         onBlur={RegistrationFormControl.handleBlur}
                         variant="outlined"
                         fullWidth
                     />
-                    {RegistrationFormControl.errors.username && RegistrationFormControl.touched.username
-                        ? RegistrationFormControl.errors.username
+                    {RegistrationFormControl.errors.fullName && RegistrationFormControl.touched.fullName
+                        ? RegistrationFormControl.errors.fullName
                         : null}
                 </Box>
                 <Box

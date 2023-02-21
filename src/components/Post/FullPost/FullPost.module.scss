@@ -1,0 +1,42 @@
+.post_inner {
+    padding: 10px 30px 30px 30px;
+
+    border-radius: 0 !important;
+    p {
+        font-size: 18px !important;
+    }
+}
+
+.post_title {
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+}
+
+.post_content {
+    margin-bottom: 10px;
+}
+
+.post_user_info {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 40px;
+        width: 40px;
+
+        border-radius: 8px;
+    }
+
+    b {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0px 10px 0px 10px;
+    }
+
+    span {
+        font-size: 16px;
+        font-weight: 600;
+
+        color: #2ea83a;
+    }
+}

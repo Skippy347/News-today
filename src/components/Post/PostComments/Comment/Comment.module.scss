@@ -1,0 +1,43 @@
+.comment {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    margin: 20px 0px 20px 0px;
+    > .comment_text {
+        padding: 5px 0px 5px 0px;
+    }
+
+    > .comment_reply_btn {
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+
+        &:hover {
+            color: #346eb8;
+        }
+    }
+}
+
+.user_info_inner {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 40px;
+        width: 40px;
+
+        border-radius: 8px;
+    }
+
+    b {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    span {
+        font-size: 12px;
+        opacity: 0.7;
+
+        margin-left: 10px;
+    }
+}

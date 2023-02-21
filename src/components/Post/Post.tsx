@@ -1,30 +1,33 @@
 import styles from "./Post.module.scss";
 
-import { PostActions } from "./PostActions/PostActions";
 import { Paper, Typography } from "@mui/material";
+import { MainLayout } from "../MainLayout/MainLayout";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { PostContext } from "../../context/postsContext";
 
 export const Post: React.FC = () => {
-    return (
-        <>
+    const { posts } = useContext(PostContext);
+
+    const parse = posts.map((el: any) => (
+        <Link to={`full/${el.id}`}>
             <Paper elevation={0} className={styles.post_inner}>
                 <Typography variant="h5" className={styles.post_title}>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt magnam fugit
-                    accusamus veritatis numquam eos.
+                    {el.title}
                 </Typography>
                 <Typography className={styles.post_text}>
-                    Deserunt magnam fugit accusamus veritatis numquam eos.
-                </Typography>
-                <Typography className={styles.post_text}>
-                    Magnam fugit accusamus veritatis numquam eos. Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Eaque provident, soluta deleniti voluptatum nisi impedit?
+                    {el.content.map((ell: any) => (
+                        <>{ell.data.text}</>
+                    ))}
                 </Typography>
                 <img
                     className={styles.post_img}
                     src="https://www.meme-arsenal.com/memes/68e07181b791ac4facda20c5e474150d.jpg"
                     alt="Avatar"
                 />
-                <PostActions />
             </Paper>
-        </>
-    );
+        </Link>
+    ));
+
+    return <MainLayout>{parse}</MainLayout>;
 };
